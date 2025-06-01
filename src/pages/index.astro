@@ -1,112 +1,24 @@
 ---
-import "../styles/main.css";
+import MainLayout from '../layouts/MainLayout.astro';
+import TopBar from '../components/layout/TopBar.astro';
+import NavBar from '../components/layout/NavBar.astro';
+import HeroSection from '../components/sections/index/HeroSection.astro';
+import OfferSection from '../components/sections/index/OfferSection.astro';
+import Diferencias from '../components/sections/index/Diferencias.astro';
+import Propuesta from '../components/sections/index/Propuesta.astro';
+import Respaldo from '../components/sections/index/Respaldo.astro';
+import Eventos from '../components/sections/index/Eventos.astro';
+import Footer from '../components/layout/Footer.astro';
 ---
 
-<!DOCTYPE html>
-<html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Inicio - Colegio Maria Auxiliadora</title>
-  </head>
-  <body>
-    <!-- Barra superior -->
-    <div class="top-bar">
-      <div class="info-group">
-        <div class="info-item"><img src="/ubicacion.png" alt="Ubicación" /><span>Jr. Trujillo Sur N° 768 - Chosica</span></div>
-        <div class="info-item"><img src="/correo.png" alt="Correo" /><span>cepmachosica@cepma.edu.pe</span></div>
-        <div class="info-item"><img src="/telefono.png" alt="Teléfono" /><span>01-3601377</span></div>
-        <div class="info-item"><img src="/horario-atencion.png" alt="Horario" /><span>Atención: Lunes-Viernes 8:00 a.m - 3:00 p.m</span></div>
-      </div>
-      <div class="socials">
-        <img src="/facebook.png" alt="Facebook" />
-        <img src="/whatsapp.png" alt="WhatsApp" />
-        <img src="/tiktok.png" alt="TikTok" />
-        <img src="/instagram.png" alt="Instagram" />
-      </div>
-    </div>
-
-    <!-- Navegación -->
-    <div class="nav-bar">
-      <div class="left-section">
-        <img src="/favicon.png" alt="Logo del colegio" class="logo" />
-        <div class="brand-text">
-          <span class="line1"><strong>Instituto Figlie Maria Ausiliatrice</strong></span>
-          <span class="line2">salesiane di Don Bosco</span>
-          <span class="line3 celeste">Inspectoria Santa Rosa de Lima - PER</span>
-          <span class="line4 celeste">Colegio Maria Auxiliadora - Chosica</span>
-        </div>
-      </div>
-      <nav class="nav-links">
-        <a href="#">Nosotros</a><span class="separator"></span>
-        <a href="#">Propuesta educativa</a><span class="separator"></span>
-        <a href="#">Pastoral</a><span class="separator"></span>
-        <a href="#">Actividades extracurriculares</a>
-      </nav>
-      <div class="nav-buttons">
-        <a href="#" class="btn-outline">Cubicol</a>
-        <a href="#" class="btn-filled">Admisión 2025</a>
-      </div>
-    </div>
-
-    <!-- Hero -->
-    <div class="hero">
-      <div class="hero-text">
-        <h1>
-          Un legado salesiano:<br>
-          <span>una educación integral, con valores que transforma vidas y futuros</span>
-        </h1>
-        <p>Formamos personas íntegras y comprometidas.<br>¿Listo para ser parte de nuestra misión?</p>
-        <a href="#" class="hero-button">
-          Admisión 2025
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
-            <path d="M13.293 4.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L17.586 12H4a1 1 0 110-2h13.586l-4.293-4.293a1 1 0 010-1.414z"/>
-          </svg>
-        </a>
-      </div>
-      <div class="hero-image">
-        <img src="/santos.png" alt="Educación Salesiana" />
-      </div>
-    </div>
-
-  
-    <!-- Sección ¿Qué ofrecemos? -->
-    <section class="ofrecemos">
-  <h2 class="titulo-subrayado">¿Qué ofrecemos?</h2>
-
-  <div class="niveles">
-  <div class="card">
-    <img src="/nivelinicial.png" alt="Nivel Inicial">
-    <div class="banda">
-      Nivel Inicial <span class="flecha">➜</span>
-    </div>
-  </div>
-
-     <div class="card">
-    <img src="/nivelprimaria.png" alt="Nivel Primaria">
-    <div class="banda">
-      Nivel Primaria <span class="flecha">➜</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="/nivelsecundaria.png" alt="Nivel Secundaria">
-    <div class="banda">
-      Nivel Secundaria <span class="flecha">➜</span>
-    </div>
-  </div>
-
-  <div class="card">
-    <img src="/talleres.png" alt="Talleres">
-    <div class="banda">
-      Talleres <span class="flecha">➜</span>
-    </div>
-  </div>
-
-  
-</div>
-  </div>
-</section>
-
-  </body>
-</html>
+<MainLayout>
+  <TopBar />
+  <NavBar />
+  <HeroSection />
+  <OfferSection />
+  <Diferencias />
+  <Propuesta />
+  <Respaldo />
+  <Eventos />
+  <Footer />
+</MainLayout>
