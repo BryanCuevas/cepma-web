@@ -1,0 +1,112 @@
+---
+// Barra de navegación
+---
+
+<div class="nav-bar bg-white shadow-md p-3 flex items-center justify-between">
+	<!-- Sección de la izquierda -->
+	<div class="left-section flex items-center gap-3">
+		<!-- Logo con redireccionamiento al index -->
+		<a href="/">
+			<img
+				src="/cepma-logo.svg"
+				alt="Logo del colegio"
+				class="logo w-12 h-12 md:w-16 md:h-16"
+			/>
+		</a>
+	</div>
+
+	<!-- Navegación principal -->
+	<nav class="nav-links hidden md:flex items-center gap-4">
+		<a
+			href="/nosotros"
+			class="text-gray-700 hover:text-gray-900 text-sm md:text-base"
+			>Nosotros</a
+		>
+		<!-- Redireccionamiento temporal a la página de miembros -->
+		<a
+			href="/miembros"
+			class="text-gray-700 hover:text-gray-900 text-sm md:text-base"
+			>Propuesta educativa</a
+		>
+		<a
+			href="#"
+			class="text-gray-700 hover:text-gray-900 text-sm md:text-base"
+			>Pastoral</a
+		>
+		<a
+			href="#"
+			class="text-gray-700 hover:text-gray-900 text-sm md:text-base"
+			>Actividades extracurriculares</a
+		>
+	</nav>
+
+	<!-- Botones -->
+	<div class="nav-buttons hidden md:flex items-center gap-3">
+		<a
+			href="#"
+			class="btn-outline border border-gray-700 text-gray-700 px-4 py-2 rounded hover:bg-gray-700 hover:text-white text-sm font-semibold"
+			>Cubicol</a
+		>
+		<a
+			href="#"
+			class="btn-filled bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm font-semibold"
+			>Admisión 2025</a
+		>
+	</div>
+
+	<!-- Menú móvil: botón hamburguesa -->
+	<div class="mobile-menu flex md:hidden items-center">
+		<button id="hamburger" class="text-gray-700 focus:outline-none">
+			<svg
+				xmlns="http://www.w3.org/2000/svg"
+				class="h-6 w-6"
+				fill="none"
+				viewBox="0 0 24 24"
+				stroke="currentColor"
+			>
+				<path
+					stroke-linecap="round"
+					stroke-linejoin="round"
+					stroke-width="2"
+					d="M4 6h16M4 12h16m-7 6h7"></path>
+			</svg>
+		</button>
+	</div>
+
+	<!-- Menú desplegable móvil -->
+	<div
+		id="mobile-nav"
+		class="hidden flex-col bg-white shadow-md mt-2 p-3 space-y-2"
+	>
+		<a
+			href="#"
+			class="text-gray-700 hover:text-gray-900 text-sm font-medium"
+			>Nosotros</a
+		>
+		<a
+			href="#"
+			class="text-gray-700 hover:text-gray-900 text-sm font-medium"
+			>Propuesta educativa</a
+		>
+		<a
+			href="#"
+			class="text-gray-700 hover:text-gray-900 text-sm font-medium"
+			>Pastoral</a
+		>
+		<a
+			href="#"
+			class="text-gray-700 hover:text-gray-900 text-sm font-medium"
+			>Actividades extracurriculares</a
+		>
+		<a
+			href="#"
+			class="btn-outline border border-gray-700 text-gray-700 px-4 py-2 rounded hover:bg-gray-700 hover:text-white text-sm font-semibold"
+			>Cubicol</a
+		>
+		<a
+			href="#"
+			class="btn-filled bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm font-semibold"
+			>Admisión 2025</a
+		>
+	</div>
+</div>
