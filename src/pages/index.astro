@@ -1,16 +1,24 @@
 ---
-
+import MainLayout from "../layouts/MainLayout.astro";
+import BarraContacto from "../components/layout/BarraContacto.astro";
+import BarraNavegacion from "../components/layout/BarraNavegacion.astro";
+import Hero from "../components/sections/index/Hero.astro";
+import Servicios from "../components/sections/index/Servicios.astro";
+import Diferencias from "../components/sections/index/Diferencias.astro";
+import Propuestas from "../components/sections/index/Propuestas.astro";
+import CifrasRespaldo from "../components/sections/index/CifrasRespaldo.astro";
+import Celebraciones from "../components/sections/index/Celebraciones.astro";
+import PiePagina from "../components/layout/PiePagina.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>CEPMA Chosica</title>
-	</head>
-	<body>
-		<h1>Astro</h1>
-	</body>
-</html>
+<MainLayout>
+	<BarraContacto />
+	<BarraNavegacion />
+	<Hero />
+	<Servicios />
+	<Diferencias />
+	<Propuestas />
+	<CifrasRespaldo />
+	<Celebraciones />
+	<PiePagina />
+</MainLayout>
