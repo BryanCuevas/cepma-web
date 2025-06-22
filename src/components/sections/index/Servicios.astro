@@ -1,5 +1,10 @@
 ---
 // Sección de servicios educativos
+
+import NivelInicial from "../../../images/index/nivel-inicial.webp";
+import NivelPrimaria from "../../../images/index/nivel-primaria.webp";
+import NivelSecundaria from "../../../images/index/nivel-secundaria.webp";
+import Talleres from "../../../images/index/talleres.webp";
 ---
 
 <section class="bg-[#f8ffff] py-8 px-6 md:px-6">
@@ -8,7 +13,7 @@
 		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
 			<div class="card">
 				<img
-					src="/src/images/index/nivel-inicial.webp"
+					src={NivelInicial.src}
 					alt="Nivel Inicial"
 					class="card-img"
 				/>
@@ -22,7 +27,7 @@
 			</div>
 			<div class="card">
 				<img
-					src="/src/images/index/nivel-primaria.webp"
+					src={NivelPrimaria.src}
 					alt="Nivel Primaria"
 					class="card-img"
 				/>
@@ -36,7 +41,7 @@
 			</div>
 			<div class="card">
 				<img
-					src="/src/images/index/nivel-secundaria.webp"
+					src={NivelSecundaria.src}
 					alt="Nivel Secundaria"
 					class="card-img"
 				/>
@@ -50,7 +55,7 @@
 			</div>
 			<div class="card">
 				<img
-					src="/src/images/index/talleres.webp"
+					src={Talleres.src}
 					alt="Talleres"
 					class="card-img"
 				/>
