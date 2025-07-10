@@ -2,112 +2,120 @@
 // Barra de navegación
 ---
 
-<div class="nav-bar bg-white shadow-md p-3 flex items-center justify-between">
-	<!-- Sección de la izquierda -->
-	<div class="left-section flex items-center gap-3">
-		<!-- Logo con redireccionamiento al index -->
-		<a href="/">
-			<img
-				src="/cepma-logo.svg"
-				alt="Logo del colegio"
-				class="logo w-12 h-12 md:w-16 md:h-16"
-			/>
-		</a>
-	</div>
-
-	<!-- Navegación principal -->
-	<nav class="nav-links hidden md:flex items-center gap-4">
-		<a
-			href="/nosotros"
-			class="text-gray-700 hover:text-gray-900 text-sm md:text-base"
-			>Nosotros</a
-		>
-		<!-- Redireccionamiento temporal a la página de miembros -->
-		<a
-			href="/miembros"
-			class="text-gray-700 hover:text-gray-900 text-sm md:text-base"
-			>Propuesta educativa</a
-		>
-		<a
-			href="#"
-			class="text-gray-700 hover:text-gray-900 text-sm md:text-base"
-			>Pastoral</a
-		>
-		<a
-			href="#"
-			class="text-gray-700 hover:text-gray-900 text-sm md:text-base"
-			>Actividades extracurriculares</a
-		>
-	</nav>
-
-	<!-- Botones -->
-	<div class="nav-buttons hidden md:flex items-center gap-3">
-		<a
-			href="#"
-			class="btn-outline border border-gray-700 text-gray-700 px-4 py-2 rounded hover:bg-gray-700 hover:text-white text-sm font-semibold"
-			>Cubicol</a
-		>
-		<a
-			href="#"
-			class="btn-filled bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm font-semibold"
-			>Admisión 2025</a
-		>
-	</div>
-
-	<!-- Menú móvil: botón hamburguesa -->
-	<div class="mobile-menu flex md:hidden items-center">
-		<button id="hamburger" class="text-gray-700 focus:outline-none">
-			<svg
-				xmlns="http://www.w3.org/2000/svg"
-				class="h-6 w-6"
-				fill="none"
-				viewBox="0 0 24 24"
-				stroke="currentColor"
+<nav class="bg-white sticky top-0 min-w-xs z-40">
+	<div class="flex w-full px-6 py-3 items-center justify-between md:px-10">
+		<!-- Contenedor de logos -->
+		<div class="flex items-center">
+			<!-- Logo para pantallas de 768px en adelante en adelante -->
+			<a href="/">
+				<img
+					src="/cepma-logo.svg"
+					alt="María Auxiliadora, sede Chosica"
+					class="hidden md:flex md:w-64 md:h-18"
+				/>
+			</a>
+			<!-- Logo para pantallas menores a 768px -->
+			<a href="/">
+				<img 
+					src="/fma-logo.svg" 
+					alt="María Auxiliadora, sede Chosica"
+					class="w-18 h-18 md:hidden"	
+				/>
+			</a>
+		</div>
+		<!-- Contenedor de icono de menú móvil, links de navegación y botones -->
+		<div class="flex relative gap-4 sm:gap-5">
+			<!--Icono de menú móvil -->
+			<div class="lg:hidden flex items-center">
+				<button type="button" id="mobile-menu-button">
+					<img
+						src="/menu-movil.svg"
+						alt="Abrir menú"
+						class="w-10 h-10"
+					/>
+				</button>
+			</div>
+			<!-- Links -->
+			<div
+				id="navigation-menu"
+				class="absolute hidden top-full right-0 bg-white pb-2 gap-1 flex-col items-center justify-between lg:flex lg:relative lg:flex-row lg:pb-0"
 			>
-				<path
-					stroke-linecap="round"
-					stroke-linejoin="round"
-					stroke-width="2"
-					d="M4 6h16M4 12h16m-7 6h7"></path>
-			</svg>
-		</button>
+				<!-- Menú con dropdown -->
+				<div class="pl-2 py-2">
+					<button
+						type="button"
+						id="dropdown-toggle"
+						class="flex items-center gap-1 pr-1"
+					>
+						<span class="pointer-events-none">Conócenos</span>
+						<img
+							src="/flecha-dropdown.svg"
+							alt="Expandir menú"
+							class="w-4 h-4 pointer-events-none"
+						/>
+					</button>
+					<!-- Links del menú con dropdown -->
+					<div id="dropdown-menu" class="absolute hidden z-50 lg:top-full bg-[#4FAFB1] text-white rounded-b-lg w-auto">
+						<a href="/nosotros" class="block px-4 py-2 text-nowrap hover:bg-[#D6F1EF] hover:text-black">Sobre nosotros</a>
+						<a href="/miembros" class="block px-4 py-2 text-nowrap hover:bg-[#D6F1EF] hover:text-black hover:rounded-b-lg">Profesores y staff</a>
+					</div>
+				</div>
+				<!-- Resto de links -->
+				<a href="#" class="block py-2 px-2">Pastoral</a>
+				<a href="#" class="block py-2 px-2 text-nowrap">Propuesta educativa</a>
+				<a href="#" class="block lg:hidden xl:block py-2 px-2">Talleres</a>
+			</div>
+			<!-- Botones -->
+			<div class="flex order-first items-center gap-3 lg:order-last">
+				<a
+					href="#"
+					class="hidden sm:flex  rounded-lg px-4 py-2 text-center border-2 border-solid border-[#4FAFB1] text-[#4FAFB1] text-sm font-bold
+					hover:bg-[#F0F9F9] duration-250 ease-in-out"
+					>Cubicol</a
+				>
+				<a
+					href="#"
+					class="rounded-lg px-4 py-2 text-center text-nowrap text-white text-sm font-bold bg-[#4FAFB1] 
+					hover:bg-[#297378] duration-250 ease-in-out"
+					>Admisión 2025</a
+				>
+			</div>
+		</div>		
 	</div>
+</nav>
 
-	<!-- Menú desplegable móvil -->
-	<div
-		id="mobile-nav"
-		class="hidden flex-col bg-white shadow-md mt-2 p-3 space-y-2"
-	>
-		<a
-			href="/nosotros"
-			class="text-gray-700 hover:text-gray-900 text-sm font-medium"
-			>Nosotros</a
-		>
-		<!-- Redireccionamiento temporal a la página de miembros -->
-		<a
-			href="/miembros"
-			class="text-gray-700 hover:text-gray-900 text-sm font-medium"
-			>Propuesta educativa</a
-		>
-		<a
-			href="#"
-			class="text-gray-700 hover:text-gray-900 text-sm font-medium"
-			>Pastoral</a
-		>
-		<a
-			href="#"
-			class="text-gray-700 hover:text-gray-900 text-sm font-medium"
-			>Actividades extracurriculares</a
-		>
-		<a
-			href="#"
-			class="btn-outline border border-gray-700 text-gray-700 px-4 py-2 rounded hover:bg-gray-700 hover:text-white text-sm font-semibold"
-			>Cubicol</a
-		>
-		<a
-			href="#"
-			class="btn-filled bg-gray-700 text-white px-4 py-2 rounded hover:bg-gray-800 text-sm font-semibold"
-			>Admisión 2025</a
-		>
-	</div>
-</div>
+<script is:inline>
+	document.addEventListener("DOMContentLoaded", () => {
+		// Selección del dropdown toggle
+		const dropdownToggle = document.getElementById("dropdown-toggle");
+
+		dropdownToggle.addEventListener("click", () => {
+			const dropdownMenu = document.getElementById("dropdown-menu");
+
+			if (dropdownMenu.classList.contains("hidden")) {
+				dropdownMenu.classList.remove("hidden");
+			} else {
+				// Al hacer click cuando ya está abierto, se cierra
+				dropdownMenu.classList.add("hidden");
+			}
+		});
+		
+		// Cerrar menú al hacer click fuera del menú con dropdown
+		window.addEventListener("click", (event) => {
+			const dropdownMenu = document.getElementById("dropdown-menu");
+			
+			if (!event.target.matches("#dropdown-toggle") && !dropdownMenu.contains(event.target)) {
+				dropdownMenu.classList.add("hidden");
+			}					
+		});
+
+		// Elementos del menú móvil
+		const mobileMenuButton = document.getElementById("mobile-menu-button");
+		const navigationMenu = document.getElementById("navigation-menu");
+		
+		// Evento click para toggle del menú móvil
+		mobileMenuButton.addEventListener("click", () => {
+			navigationMenu.classList.toggle("hidden");
+		});
+	});
+</script>
