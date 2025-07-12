@@ -11,56 +11,6 @@ body {
 	font-family: 'Poppins', sans-serif;
 }
 
-/* Contact Bar */
-.contact-bar {
-	background-color: #4fafb1;
-	display: flex;
-	justify-content: space-between;
-	align-items: center;
-	padding: 0.4rem 1rem;
-	font-size: 0.8rem;
-	flex-wrap: wrap;
-}
-
-.info-group {
-	display: flex;
-	align-items: center;
-	gap: 1.5rem;
-	flex-wrap: wrap;
-}
-
-.info-item {
-	display: flex;
-	align-items: center;
-	gap: 0.2rem;
-}
-
-.info-item img {
-	width: 24px;
-	height: 24px;
-}
-
-.info-item span {
-	color: #fff;
-}
-
-.socials img {
-	width: 24px;
-	height: 24px;
-	cursor: pointer;
-	transition: transform 0.3s ease;
-}
-
-.socials img:hover {
-	transform: scale(1.1);
-}
-
-@media (max-width: 768px) {
-	.contact-bar {
-		display: none;
-	}
-}
-
 .brand-text {
 	display: flex;
 	flex-direction: column;
@@ -73,20 +23,8 @@ body {
 	font-size: 0.9rem;
 }
 
-.celeste {
-	color: #4eb1b1;
 }
 
-/* RESPONSIVE */
-@media (max-width: 992px) {
-	.contact-bar {
-		justify-content: center;
-		gap: 0.8rem;
-	}
-
-	.info-group {
-		justify-content: center;
-	}
 }
 
 @media (max-width: 768px) {
@@ -112,23 +50,6 @@ body {
 
 /* CELULARES */
 @media (max-width: 480px) {
-	.contact-bar {
-		flex-direction: column;
-		align-items: center;
-		text-align: center;
-		gap: 0.6rem;
-		padding: 0.6rem;
-	}
-
-	.info-group {
-		flex-direction: column;
-		gap: 0.4rem;
-	}
-
-	.socials {
-		justify-content: center;
-	}
-
 	.hero {
 		padding: 2rem 1rem;
 	}
