@@ -23,8 +23,12 @@ body {
 	font-size: 0.9rem;
 }
 
+.informacion-contacto {
+	@apply flex items-center gap-1 text-nowrap;
 }
 
+.iconos-redes-sociales {
+	@apply size-6 transition duration-300 hover:scale-110;
 }
 
 @media (max-width: 768px) {
