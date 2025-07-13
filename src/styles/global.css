@@ -27,8 +27,8 @@ body {
 	@apply flex items-center gap-1 text-nowrap;
 }
 
-.iconos-redes-sociales {
-	@apply size-6 transition duration-300 hover:scale-110;
+.aumento-escala-simple {
+	@apply hover:scale-110 duration-300 ease-linear;
 }
 
 @media (max-width: 768px) {
