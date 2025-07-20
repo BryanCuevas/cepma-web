@@ -5,68 +5,55 @@ import NivelInicial from "../../../images/index/nivel-inicial.webp";
 import NivelPrimaria from "../../../images/index/nivel-primaria.webp";
 import NivelSecundaria from "../../../images/index/nivel-secundaria.webp";
 import Talleres from "../../../images/index/talleres.webp";
+
+const servicios = [
+	{
+		servicio: "Nivel inicial",
+		imagen: NivelInicial.src,
+	},
+	{
+		servicio: "Nivel Primaria",
+		imagen: NivelPrimaria.src,
+	},
+	{
+		servicio: "Nivel Secundaria",
+		imagen: NivelSecundaria.src,
+	},
+	{
+		servicio: "Talleres",
+		imagen: Talleres.src,
+	},
+];
 ---
 
-<section class="bg-[#f8ffff] py-8 px-6 md:px-6">
-	<div class="max-w-6xl mx-auto">
-		<h2 class="titulo-subrayado mb-20">¿Qué ofrecemos?</h2>
-		<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
-			<div class="card">
-				<img
-					src={NivelInicial.src}
-					alt="Nivel Inicial"
-					class="card-img"
-				/>
-				<div class="oferta-educativa">
-					Nivel Inicial
-					<img
-						src="/flecha-derecha-servicios.svg"
-						class="w-4 h-4 md:w-6 md:h-6"
-					/>
-				</div>
-			</div>
-			<div class="card">
-				<img
-					src={NivelPrimaria.src}
-					alt="Nivel Primaria"
-					class="card-img"
-				/>
-				<div class="oferta-educativa">
-					Nivel Primaria
-					<img
-						src="/flecha-derecha-servicios.svg"
-						class="w-4 h-4 md:w-6 md:h-6"
-					/>
-				</div>
-			</div>
-			<div class="card">
-				<img
-					src={NivelSecundaria.src}
-					alt="Nivel Secundaria"
-					class="card-img"
-				/>
-				<div class="oferta-educativa">
-					Nivel Secundaria
-					<img
-						src="/flecha-derecha-servicios.svg"
-						class="w-4 h-4 md:w-6 md:h-6"
-					/>
-				</div>
-			</div>
-			<div class="card">
-				<img
-					src={Talleres.src}
-					alt="Talleres"
-					class="card-img"
-				/>
-				<div class="oferta-educativa">
-					Talleres
-					<img
-						src="/flecha-derecha-servicios.svg"
-						class="w-4 h-4 md:w-6 md:h-6"
-					/>
-				</div>
-			</div>
+<section class="bg-white my-10">
+	<div class="px-4 lg:px-24">
+		<!--Título de sección -->
+		<h2 class="inline-block text-4xl text-[#4FAFB1] text-left font-semibold mb-6 
+				after:block after:w-auto after:bg-[#4FAFB1] after:h-1 after:mt-1 after:rounded-2xl">
+			¿Qué ofrecemos?
+		</h2>
+		<!-- Servicios -->
+		<div class="flex flex-wrap items-center justify-center 2xl:justify-between gap-8">
+			{
+				// Una tarjeta por cada servicio
+				servicios.map(({servicio, imagen}) => (
+					<div class="w-68 xl:w-76 h-fit overflow-hidden rounded-xl shadow-lg hover:shadow-xl hover:-translate-y-1 duration-300 ease-linear">
+						<img 
+							src={imagen} 
+							alt={servicio}
+							class="w-full h-60 xl:h-72 object-cover"
+						/>
+						<div class="bg-[#4FAFB1] flex items-center pl-6 py-3 gap-2">
+							<span class="text-white text-left font-semibold">{servicio}</span>
+							<img
+								src="/flecha-derecha-servicios.svg"
+								class="size-6"
+							/>
+						</div>
+					</div>					
+				))
+			}
 		</div>
 	</div>
 </section>
