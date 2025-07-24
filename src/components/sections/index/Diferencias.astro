@@ -4,10 +4,6 @@
 import Diferencia1 from "../../../images/index/diferencia1.webp";
 import Diferencia2 from "../../../images/index/diferencia2.webp";
 import Diferencia3 from "../../../images/index/diferencia3.webp";
-
-const DiferenciaUnoUbicacion = Diferencia1.src;
-const DiferenciaDosUbicacion = Diferencia2.src;
-const DiferenciaTresUbicacion = Diferencia3.src;
 import fondoDiferencias from "../../../images/index/fondo-diferencias.webp";
 
 const diferencias = [
@@ -15,67 +11,59 @@ const diferencias = [
 		titulo: "Diferencia 1",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur. Purus sagittis tellus nisl id. Lorem placerat ut fringilla condimentum rhoncus. Pretium varius ultrices risus commodo. Quis aenean diam at proin. Neque erat sit leo egestas ut parturient quisque diam. Facilisi non diam est commodo. Consequat venenatis convallis vitae lectus amet quis non a. Aliquam pellentesque nunc.",
-		imagen: DiferenciaUnoUbicacion,
+		imagen: Diferencia1.src,
 	},
 	{
 		titulo: "Diferencia 2",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur. Purus sagittis tellus nisl id. Lorem placerat ut fringilla condimentum rhoncus. Pretium varius ultrices risus commodo. Quis aenean diam at proin. Neque erat sit leo egestas ut parturient quisque diam. Facilisi non diam est commodo. Consequat venenatis convallis vitae lectus amet quis non a. Aliquam pellentesque nunc.",
-		imagen: DiferenciaDosUbicacion,
+		imagen: Diferencia2.src,
 	},
 	{
 		titulo: "Diferencia 3",
 		descripcion:
 			"Lorem ipsum dolor sit amet consectetur. Purus sagittis tellus nisl id. Lorem placerat ut fringilla condimentum rhoncus. Pretium varius ultrices risus commodo. Quis aenean diam at proin. Neque erat sit leo egestas ut parturient quisque diam. Facilisi non diam est commodo. Consequat venenatis convallis vitae lectus amet quis non a. Aliquam pellentesque nunc.",
-		imagen: DiferenciaTresUbicacion,
+		imagen: Diferencia3.src,
 	},
 ];
 ---
 
-<section class="relative w-full bg-cover bg-center py-6" style={{backgroundImage:`url(${fondoDiferencias.src})`}}>
-	<div class="mx-24">
-		<!-- Título del componente -->
-		<h2 class="titulo-subrayado mb-32">
+<section class="relative w-full bg-cover bg-center py-6 my-10" style={{backgroundImage:`url(${fondoDiferencias.src})`}}>
+	<div class="px-4 lg:px-24">
+		{/* Título de sección */}
+		<h2 class="inline-block text-4xl text-[#4FAFB1] text-left font-semibold mb-6 
+					after:block after:w-auto after:bg-[#4FAFB1] after:h-1 after:mt-1 after:rounded-2xl">
 			¿Por qué elegir María Auxiliadora?
-		</h2>
-
-		<!-- Tarjetas -->
-		<div class="space-y-32 mt-20">
+		</h2>	
+		<div class="flex flex-col gap-8 lg:gap-16">
 			{
 				diferencias.map((item, index) => (
-					<div
-						class={`relative flex flex-col md:flex-row ${
-							index % 2 === 0
-								? "md:flex-row"
-								: "md:flex-row-reverse"
-						} items-start`}
-					>
+					<div class={`flex flex-col ${index % 2 === 0 ? "lg:flex-row" : "lg:flex-row-reverse"} bg-red-500`}>
 						{/* Imagen */}
-						<div class="relative w-full md:w-1/2 z-20 md:-mt-22">
+						<div class="z-10 lg:w-1/2">
 							<img
 								src={item.imagen}
 								alt={item.titulo}
-								class="w-full h-64 md:h-80 object-cover rounded-xl shadow-2xl translate-y-6"
+								class="w-full h-64 md:h-80 object-cover rounded-t-3xl lg:rounded-3xl lg:shadow-3xl"
 							/>
-						</div>
-
+						</div>				
 						{/* Contenido de la tarjeta */}
-						<div
-							class={`relative z-10 bg-white shadow-lg rounded-3xl p-5 md:p-15 flex flex-col justify-between w-full md:w-1/2 mt-[-20px] md:mt-[-40px] ${
-								index % 2 === 0
-									? "md:ml-[-32px]"
-									: "md:mr-[-32px]"
+						<div 
+							class={`flex flex-col lg:w-1/2 bg-white shadow-lg rounded-b-3xl lg:rounded-3xl 
+							px-5 py-6 lg:pt-6 lg:pb-9 lg:mt-12 ${
+								index % 2 === 0 
+									? "lg:pl-16 lg:pr-8 lg:-ml-8" 
+									: "lg:pl-8 lg:pr-16 lg:-mr-8"
 							}`}
 						>
-							<h3 class="text-2xl font-bold text-[#2c9b9b] mb-4">
+							<h3 class="text-2xl font-bold text-[#297378] mb-4">
 								{item.titulo}
 							</h3>
 							<p class="text-gray-700 mb-6">{item.descripcion}</p>
-							<a
+							<a 
 								href="#"
-								class="inline-flex self-start bg-[#2c9b9b] hover:bg-[#136d6d] text-white text-sm font-semibold py-3 px-6 rounded-lg transition-transform duration-300 transform hover:scale-105 w-auto"
-							>
-								Leer más
+								class="flex self-start px-6 py-3 rounded-lg bg-[#4FAFB1] hover:bg-[#297378] hover:scale-105 duration-300 ease-linear">
+								<span class="text-white text-center text-sm font-semibold">Leer más</span>
 							</a>
 						</div>
 					</div>
