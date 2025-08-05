@@ -31,52 +31,6 @@ body {
 	@apply hover:scale-110 duration-300 ease-linear;
 }
 
-@media (max-width: 768px) {
-	.hero {
-		flex-direction: column;
-		text-align: center;
-	}
-
-	.hero-text {
-		margin-right: 0;
-		flex: 1;
-	}
-
-	.hero-text h1,
-	.hero-text h1 span {
-		font-size: 2rem;
-	}
-
-	.hero-button {
-		justify-content: center;
-	}
-}
-
-/* CELULARES */
-@media (max-width: 480px) {
-	.hero {
-		padding: 2rem 1rem;
-	}
-
-	.hero-text h1,
-	.hero-text h1 span {
-		font-size: 1.6rem;
-	}
-
-	.hero-text p {
-		font-size: 1rem;
-	}
-
-	.hero-button {
-		padding: 0.6rem 1rem;
-		font-size: 0.9rem;
-	}
-
-	.hero-image img {
-		border-radius: 20px;
-	}
-}
-
 
 .titulo-subrayado {
 	color: #17959e;
